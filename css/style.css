@@ -7,6 +7,8 @@
     --link: #7f8fa6;
     --link-hover: #fbc531;
 
+    --icone: white;
+
     --borda: black;
     --borda-input: black;
     --input-focus: #40739e;
@@ -51,7 +53,7 @@ body {
 
 .iconePesquisa {
     position: absolute;
-    color: var(--placeholder);
+    color: var(--icone);
     padding-inline: 0.3rem;
     pointer-events: none;
 }
@@ -59,6 +61,7 @@ body {
 .barraPesquisa {
     padding-block: 0.1rem;
     padding-inline: 1.5rem;
+    display: none;
     border-radius: 30px;
     border: none;
 }
@@ -195,6 +198,31 @@ body {
 
 /* -------------------------------- */
 
+
+/* PERGUNTAS  */
+
+.pPrincipal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 3rem;
+}
+
+
+.pPrincipal h2 {
+    font-size: 1.5rem;
+}
+
+.pInputs {
+    
+}
+
+/* ------------------------ */
+
+
 @media only screen and (width: 375px) {
     /* Mobile M */
 
@@ -218,7 +246,19 @@ body {
         font-size: 21px;
     }
 
+    /* index */
 
+    .iconePesquisa {
+        color: var(--placeholder);
+    }
+
+    .barraPesquisa {
+        display: flex;
+    }
+
+
+
+    /*----------------------- */
 
     /* AUTENTICAÇÃO */
 
