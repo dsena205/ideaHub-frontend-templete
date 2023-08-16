@@ -1,0 +1,261 @@
+:root {
+    --fundo: #192a56;
+    --texto: white;
+    --placeholder: gray;
+    --placeholder-focus: rgb(0, 0, 0);
+
+    --link: #7f8fa6;
+    --link-hover: #fbc531;
+
+    --borda: black;
+    --borda-input: black;
+    --input-focus: #40739e;
+    --texto-input: black;
+}
+
+/* Mobile S */
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+/* --------- index ------------*/
+
+.iLogo {
+    text-decoration: none;
+    color: var(--texto);
+}
+
+.iCaixa-nav {
+    background-color: var(--input-focus);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+}
+
+.iPesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.iconePesquisa {
+    position: absolute;
+    color: var(--placeholder);
+    padding-inline: 0.3rem;
+    pointer-events: none;
+}
+
+.barraPesquisa {
+    padding-block: 0.1rem;
+    padding-inline: 1.5rem;
+    border-radius: 30px;
+    border: none;
+}
+
+.barraPesquisa::placeholder {
+    color: var(--placeholder);
+    margin-inline: 0.1rem;
+}
+
+.barraPesquisa:focus {
+    outline: none;
+}
+
+.barraPesquisa:focus + .iconePesquisa,
+.barraPesquisa:focus::placeholder{
+    color: var(--placeholder-focus);
+}
+
+.iAutenticacao {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* -------------------------- */
+
+
+/* AUTENTICAÇÃO  */
+
+.auPrincipal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.auTitulo {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.auCaixa-form {
+    margin: 0 3rem;
+    /*border: solid var(--borda) 1px;*/
+}
+
+.auCaixa-form h2 {
+    text-align: center;
+    padding: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.auCaixa-input {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0.3rem 0.3rem;
+}
+
+.auCaixa-input input {
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+    outline: none;
+    background-color: var(--fundo);
+    border: solid 1px var(--borda-input);
+    border-radius: 10px;
+    transition: 0.5s;
+    color: var(--texto-input);
+}
+
+.auCaixa-input span {
+    position: absolute;
+    pointer-events: none;
+    padding: 0.8rem;
+    color: var(--placeholder);
+    transition: 0.5s;
+}
+
+.auCaixa-input span i {
+    width: 24px;
+    height: 24px;
+}
+
+.auCaixa-input input:focus~span,
+/* Quando focado */
+.auCaixa-input input:not(:placeholder-shown)~span {
+    /* Quando tiver texto dentro do input */
+    color: var(--input-focus);
+    transform: translate(10px, -7px);
+    border-left: 1px solid var(--input-focus);
+    border-right: 1px solid var(--input-focus);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: var(--fundo);
+    border-radius: 10px;
+    letter-spacing: 0.2em;
+}
+
+.auCaixa-input input:focus,
+.auCaixa-input input:not(:placeholder-shown) {
+    border: 1px solid var(--input-focus);
+}
+
+.auBotoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0.3rem;
+}
+
+.auBotoes div {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.auExtra {
+    font-size: 0.8rem;
+}
+
+.auLink {
+    text-decoration: none;
+    color: var(--link);
+    transition: 0.5s;
+}
+
+.auLink:hover,
+.auLink:focus {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* -------------------------------- */
+
+@media only screen and (width: 375px) {
+    /* Mobile M */
+
+    * {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (width: 425px) {
+    /* Mobile L */
+
+    * {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* Tablet para cima */
+
+    * {
+        font-size: 21px;
+    }
+
+
+
+    /* AUTENTICAÇÃO */
+
+    .auCaixa-form {
+        border: 1px solid var(--borda);
+    }
+
+    .auPrincipal {
+        /* quando chega no tablet muda o flex */
+        flex-direction: row;
+        padding: 0 1rem;
+        gap: 0.5rem;
+    }
+
+    /* -------------------- */
+}
+
+@media screen and (min-width: 1024px) {
+    /* Laptop para cima */
+
+    * {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    /* Laptop L para cima */
+
+    * {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    /* 4k para cima para cima */
+
+    * {
+        font-size: 36px;
+    }
+}
