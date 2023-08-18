@@ -1,0 +1,104 @@
+.auPrincipal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.auTitulo {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.auCaixa-form {
+    margin: 0 3rem;
+    /*border: solid var(--borda) 1px;*/
+}
+
+.auCaixa-form h2 {
+    text-align: center;
+    padding: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.auCaixa-input {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0.3rem 0.3rem;
+}
+
+.auCaixa-input input {
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+    outline: none;
+    background-color: var(--fundo);
+    border: solid 1px var(--borda-input);
+    border-radius: 10px;
+    transition: 0.5s;
+    color: var(--texto-input);
+}
+
+.auCaixa-input span {
+    position: absolute;
+    pointer-events: none;
+    padding: 0.8rem;
+    color: var(--placeholder);
+    transition: 0.5s;
+}
+
+.auCaixa-input span i {
+    width: 24px;
+    height: 24px;
+}
+
+.auCaixa-input input:focus~span,
+/* Quando focado */
+.auCaixa-input input:not(:placeholder-shown)~span {
+    /* Quando tiver texto dentro do input */
+    color: var(--input-focus);
+    transform: translate(10px, -7px);
+    border-left: 1px solid var(--input-focus);
+    border-right: 1px solid var(--input-focus);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: var(--fundo);
+    border-radius: 10px;
+    letter-spacing: 0.2em;
+}
+
+.auCaixa-input input:focus,
+.auCaixa-input input:not(:placeholder-shown) {
+    border: 1px solid var(--input-focus);
+}
+
+.auBotoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0.3rem;
+}
+
+.auBotoes div {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.auExtra {
+    font-size: 0.8rem;
+}
+
+.auLink {
+    text-decoration: none;
+    color: var(--link);
+    transition: 0.5s;
+}
+
+.auLink:hover,
+.auLink:focus {
+    color: var(--link-hover);
+    text-decoration: underline;
+}

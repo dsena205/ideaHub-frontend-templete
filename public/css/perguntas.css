@@ -1,0 +1,25 @@
+.pPrincipal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 3rem;
+}
+
+
+.pPrincipal h2 {
+    font-size: 1.5rem;
+}
+
+.pCaixa-inputs {
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
+}
+
+.pInput {
+    margin: 0.5rem 0;
+}
+
