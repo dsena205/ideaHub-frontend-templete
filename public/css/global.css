@@ -20,8 +20,8 @@
 
 /* Mobile S */
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     font-size: 17px;
     box-sizing: border-box;
 }
@@ -63,7 +63,7 @@ body {
     width: 100%;
     max-height: 2rem;
     justify-content: space-between;
-    padding-inline: 0.5rem;
+    padding-inline: 0.7rem;
     padding-block: 0.5rem;
     box-sizing: border-box;
 }
@@ -85,7 +85,6 @@ body {
     padding-block: 0.2rem;
     padding-inline: 1.5rem;
     background-color: var(--barra-pesquisa);
-    display: none;
     border-radius: 30px;
     border: 1px solid black;
 }
@@ -105,10 +104,16 @@ body {
 }
 
 .iAutenticacao {
-    display: flex;
+    display: none;
     padding-left: 0.5rem;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+}
+
+.caixa-autenticacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .usuario {
@@ -135,6 +140,14 @@ body {
     }
 }
 
+@media screen and (max-width: 425px){
+    
+    .barraPesquisa {
+        max-width: 10rem;
+    }
+    
+}
+
 @media screen and (min-width: 768px) {
     /* Tablet para cima */
 
@@ -148,8 +161,12 @@ body {
         color: var(--placeholder);
     }
 
-    .barraPesquisa {
+    .iAutenticacao {
         display: flex;
+    }
+
+    .hamburguer {
+        display: none;
     }
 
     /*----------------------- */
@@ -174,7 +191,7 @@ body {
     /* Laptop para cima */
 
     * {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
