@@ -1,7 +1,8 @@
 :root {
     --fundo: white;
     --fundo-header: black;
-    --texto: white;
+    --texto-header: white;
+    --texto: black;
     --placeholder: gray;
     --placeholder-focus: black;
 
@@ -55,7 +56,7 @@ body {
 
 .logo {
     text-decoration: none;
-    color: var(--texto);
+    color: var(--texto-header);
     font-size: 10em;
 }
 
@@ -148,7 +149,7 @@ body {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; 
-    background-color: var(--texto);
+    background-color: var(--texto-header);
 }
 
 main {
@@ -242,6 +243,7 @@ main {
         top: 48px;
         gap: 0;
         flex-direction: column;
+        justify-content: center;
         background-color: var(--fundo-header);
         width: 100%;
         border: 1px solid var(--borda);
