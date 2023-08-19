@@ -10,34 +10,35 @@
 </head>
 <body>
     <header>
-        <nav class="iCaixa-nav">
+        <nav class="caixa-nav">
             <!-- nav item 1 -->
-            <a class="iLogo" href="index.html"><h1>IdeaHub</h1></a>
+            <a class="logo" href="index.html"><h1>IdeaHub</h1></a>
 
             <!-- nav item 2 -->
-            <div class="iPesquisa"> 
+            <div class="pesquisa"> 
                 <input class="barraPesquisa" placeholder="Pesquisar..." type="search">
                 <span class="icones iconePesquisa material-symbols-outlined">search</span>
             </div>
 
             <!-- nav item 3 -->
-            <nav>
+            <nav class="nav-3">
                 <label class="hamburguer icones material-symbols-outlined">menu</label>
-                <div class="iAutenticacao">
-                    <a class="icones" href="perguntas/nova-pergunta.html"><span class=" material-symbols-outlined">add</span></a>
-                    <span class="icones material-symbols-outlined">person</span>
+                <div class="autenticacao responsive">
+                    <a class="icones flex grupo-item-nav" href="perguntas/nova-pergunta.html">
+                        <span class="material-symbols-outlined">add</span>
+                        <span>Adicionar post</span>
+                    </a>
+                    <a class="flex grupo-item-nav" href="#">
+                        <span class="icones material-symbols-outlined">person</span>
+                        <span>Usuário</span>
+                    </a>
                 </div>
             </nav>
-            
         </nav>
     </header>
 
-    <main class="iMain">
-        <h2>Bem vindo Usuario!</h2>
-    </main>
 
-
-
+     <script src="public/bootstrap/js/bootstrap.js"></script>
     <script src="public/js/script.js"></script>
 </body>
 </html>
