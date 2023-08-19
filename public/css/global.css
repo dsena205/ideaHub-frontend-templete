@@ -1,18 +1,18 @@
 :root {
     --fundo: white;
-    --fundo-header: white;
-    --texto: black;
+    --fundo-header: black;
+    --texto: white;
     --placeholder: gray;
     --placeholder-focus: black;
 
-    --link: blue;
+    --link: white;
     --link-hover: rgb(6, 6, 167);
 
     --barra-pesquisa: white;
 
     --icone: black;
 
-    --borda: black;
+    --borda: white;
     --borda-input: black;
     --input-focus: black;
     --texto-input: black;
@@ -61,13 +61,13 @@ body {
 
 .caixa-nav {
     background-color: var(--fundo-header);
-    border: 1px solid black;
+    border: 1px solid var(--borda);
     position: fixed;
     display: flex;
     align-items: center;
     width: 100%;
-    max-height: 2rem;
-    justify-content: space-between;
+    z-index: 1;
+    justify-content: space-around;
     padding-inline: 0.7rem;
     padding-block: 0.5rem;
     box-sizing: border-box;
@@ -77,6 +77,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+    justify-self: center;
 }
 
 .iconePesquisa {
@@ -108,29 +109,55 @@ body {
     color: var(--placeholder-focus);
 }
 
-.autenticacao {
-    display: none;
-    padding-left: 0.5rem;
+.caixa-nav li {
+    list-style: none;
+}
+
+.caixa-nav a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    gap: 60px;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: gray;
 }
 
 .hamburguer {
-    top: 0;
-    right: 10;
-    padding: 0.3rem 0;
+    display: none;
+    cursor: pointer;
 }
 
-.grupo-item-nav {
-    max-width: 5rem;
+.bar {
     display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+    background-color: var(--texto);
 }
+
+main {
+    position: absolute;
+    top: 80px;
+}
+
 
 /* -------------------------- */
-
-
-
-
 
 
 
@@ -156,13 +183,6 @@ body {
         max-width: 10rem;
     }
 
-    .autenticacao.responsive {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 40px;
-        right: 60px;
-    }
     
 }
 
@@ -183,10 +203,6 @@ body {
         display: flex;
     }
 
-    .hamburguer {
-        display: none;
-    }
-
     /*----------------------- */
 
     /* AUTENTICAÇÃO */
@@ -203,6 +219,44 @@ body {
     }
 
     /* -------------------- */
+}
+
+@media screen and (max-width: 1023px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 48px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--fundo-header);
+        width: 100%;
+        border: 1px solid var(--borda);
+        text-align: center;
+        transition: 0.3s;
+        z-index: 1;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
 }
 
 @media screen and (min-width: 1024px) {
