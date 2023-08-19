@@ -137,6 +137,13 @@ body {
     color: gray;
 }
 
+.mudar-tema {
+    background: none;
+    border: none;
+    color: var(--texto-header);
+    cursor: pointer;
+}
+
 .hamburguer {
     display: none;
     cursor: pointer;
@@ -266,6 +273,10 @@ main {
 
     * {
         font-size: 20px;
+    }
+
+    .descricao {
+        display: none;
     }
 }
 
