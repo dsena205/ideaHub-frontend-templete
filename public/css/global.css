@@ -1,19 +1,19 @@
 :root {
     --fundo: white;
-    --fundo-header: black;
+    --fundo-header: white;
     --texto-header: white;
     --texto: black;
     --placeholder: gray;
     --placeholder-focus: black;
 
-    --link: white;
-    --link-hover: rgb(6, 6, 167);
+    --link: blue;
+    --link-hover: black;
 
     --barra-pesquisa: white;
 
     --icone: black;
 
-    --borda: white;
+    --borda: black;
     --borda-input: black;
     --input-focus: black;
     --texto-input: black;
@@ -25,6 +25,9 @@
     font-size: 17px;
     box-sizing: border-box;
 }
+
+
+
 
 body {
     background-color: var(--fundo);
@@ -38,6 +41,7 @@ body {
 .flex {
     display: flex;
 }
+
 
 /* icones */
 
@@ -57,7 +61,7 @@ body {
 .logo {
     text-decoration: none;
     color: var(--texto-header);
-    font-size: 10em;
+    font-size: 20rem;
 }
 
 .caixa-nav {
@@ -68,17 +72,17 @@ body {
     align-items: center;
     width: 100%;
     z-index: 1;
-    justify-content: space-around;
-    padding-inline: 0.7rem;
-    padding-block: 0.5rem;
+    justify-content: space-between;
+    padding: 0.3rem 0.5rem;
     box-sizing: border-box;
-}
+}   
 
 .pesquisa {
     position: relative;
     display: flex;
     align-items: center;
     justify-self: center;
+    padding: 0 0.1rem;
 }
 
 .iconePesquisa {
@@ -89,8 +93,8 @@ body {
 }
 
 .barraPesquisa {
-    padding-block: 0.2rem;
-    padding-inline: 1.5rem;
+    width: 30rem;
+    padding: 0.3rem 1.5rem;
     background-color: var(--barra-pesquisa);
     border-radius: 30px;
     border: 1px solid black;
@@ -98,7 +102,6 @@ body {
 
 .barraPesquisa::placeholder {
     color: var(--placeholder);
-    margin-inline: 0.1rem;
 }
 
 .barraPesquisa:focus {
@@ -123,24 +126,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
 }
 
 .nav-link{
     display: flex;
     align-items: center;
-    gap: 3px;
+    padding: 0 0.3rem;
     transition: 0.7s ease;
 }
 
 .nav-link:hover {
-    color: gray;
+    color: var(--link-hover);
 }
 
 .mudar-tema {
     background: none;
     border: none;
-    color: var(--texto-header);
+    color: var(--link);
     cursor: pointer;
 }
 
@@ -159,14 +161,24 @@ body {
     background-color: var(--texto-header);
 }
 
+/* -------------------------- */
+
+
+/* index */
+
 main {
     position: absolute;
-    top: 80px;
+    top: 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.bem-vindo {
+    font-size: 1.5rem;
 }
 
 
-/* -------------------------- */
-
+/*-----------------------*/
 
 
 @media only screen and (width: 375px) {
@@ -190,8 +202,13 @@ main {
     .barraPesquisa {
         max-width: 10rem;
     }
-
     
+}
+
+@media screen and (min-width: 768px) {
+    .barraPesquisa {
+        max-width: 20rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -213,20 +230,7 @@ main {
 
     /*----------------------- */
 
-    /* AUTENTICAÇÃO */
-
-    .auCaixa-form {
-        border: 1px solid var(--borda);
-    }
-
-    .auPrincipal {
-        /* quando chega no tablet muda o flex */
-        flex-direction: row;
-        padding: 0 1rem;
-        gap: 0.5rem;
-    }
-
-    /* -------------------- */
+    
 }
 
 @media screen and (max-width: 1023px) {
@@ -247,7 +251,7 @@ main {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 48px;
+        top: 2.3rem;
         gap: 0;
         flex-direction: column;
         justify-content: center;
@@ -277,6 +281,10 @@ main {
 
     .descricao {
         display: none;
+    }
+
+    .barraPesquisa {
+        max-width: 30rem;
     }
 }
 
