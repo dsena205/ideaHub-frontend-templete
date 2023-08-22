@@ -170,12 +170,39 @@ main {
     position: absolute;
     top: 3rem;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .bem-vindo {
     font-size: 1.5rem;
 }
+
+/* CARD */
+
+.card {
+    background-color: GREEN;
+    max-width: 30rem;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.cardHeader {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.cardFooter {
+    background-color: red;
+}
+
+/*--------------------------*/
 
 
 /*-----------------------*/

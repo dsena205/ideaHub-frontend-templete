@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="../public/css/global.css">
-    <link rel="stylesheet" href="../public/css/autenticacao.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/autenticacao.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <h2>Feito por alunos para alunos</h2>
         </hgroup>
         <!-- Formulario de login -->
-        <form class="auCaixa-form" action="../index.html">
+        <form class="auCaixa-form" action="index.html">
             <h2>Login</h2>
             <!-- input 1 -->
             <div class="auCaixa-input">

@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ideaHub - nova pergunta</title>
+    <title>IdeaHub</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="../public/css/global.css">
-    <link rel="stylesheet" href="../public/css/perguntas.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/perguntas.css">
 </head>
 <body>
     <header>
         <nav class="caixa-nav">
             <!-- nav item 1 -->
-            <a class="logo" href="../index.html"><h1>IdeaHub</h1></a>
+            <a class="logo" href="index.php"><h1>IdeaHub</h1></a>
 
             <!-- nav item 2 -->
             <div class="pesquisa"> 
@@ -22,7 +22,7 @@
 
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a class="nav-link" href="perguntas/nova-pergunta.html">
+                    <a class="nav-link" href="nova-pergunta.php">
                         <span class="material-symbols-outlined">add</span>
                         <span class="descricao d-1">novo post</span>
                     </a>
@@ -54,15 +54,3 @@
             </div>
         </nav>
     </header>
-
-    <main class="pPrincipal">
-        <h2>Faça uma pergunta</h2>
-        <div class="pCaixa-inputs">
-            <input class="pInput pTitulo" type="text" name="titulo" placeholder="Titulo...">   
-            <input class="pInput pTexto" type="text" name="titulo" placeholder="Pergunta...">    
-        </div>
-         
-    </main>
-    
-</body>
-</html>
