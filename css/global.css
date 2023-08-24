@@ -17,6 +17,8 @@
     --borda-input: black;
     --input-focus: black;
     --texto-input: black;
+
+    --hamburguer: black;
 }
 
 * {
@@ -158,7 +160,7 @@ body {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; 
-    background-color: var(--texto-header);
+    background-color: var(--hamburguer);
 }
 
 /* -------------------------- */
@@ -183,23 +185,39 @@ main {
 /* CARD */
 
 .card {
-    background-color: GREEN;
     max-width: 30rem;
-    border: 1px solid black;
-    padding: 1rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
 }
 
 .cardHeader {
-    background-color: blue;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.5rem 0 0.5rem;
 }
 
 
 
+.cardTitulo {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.cardText {
+    padding: 0 0.5rem;
+    text-align: justify;
+}
 
 .cardFooter {
-    background-color: red;
+    display: flex;
+    padding: 0.5rem 2rem;
+    border-top: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*--------------------------*/
@@ -230,12 +248,11 @@ main {
         max-width: 10rem;
     }
     
+    
 }
 
 @media screen and (min-width: 768px) {
-    .barraPesquisa {
-        max-width: 20rem;
-    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -244,6 +261,7 @@ main {
     * {
         font-size: 21px;
     }
+
 
     /* header */
 
@@ -255,8 +273,17 @@ main {
         display: flex;
     }
 
+    .barraPesquisa {
+        max-width: 20rem;
+    }
+
     /*----------------------- */
 
+    .card {
+        border: 1px solid black;
+        border-radius: 50px;
+        margin: 0.3rem 0;
+    }
     
 }
 
@@ -327,6 +354,6 @@ main {
     /* 4k para cima para cima */
 
     * {
-        font-size: 36px;
+        font-size: 30px;
     }
 }
