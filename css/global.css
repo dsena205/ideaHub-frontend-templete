@@ -1,17 +1,24 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 :root {
+    --titulo: #20c997;
     --fundo: white;
-    --fundo-header: white;
+    --fundo-header: #13795b;
     --texto-header: white;
     --texto: black;
-    --placeholder: gray;
-    --placeholder-focus: black;
+    --placeholder: rgb(136, 127, 127);
+    --placeholder-focus: white;
+
+    --placeholder-date: gray;
 
     --link: blue;
     --link-hover: black;
 
-    --barra-pesquisa: white;
+    --barra-pesquisa: rgba(255, 255, 255, 0);
+    --borda-pesquisa: rgb(187, 183, 183);
 
-    --icone: black;
+    --icone: #38bdf8;
 
     --borda: black;
     --borda-input: black;
@@ -34,6 +41,7 @@
 body {
     background-color: var(--fundo);
     color: var(--texto);
+    font-family: 'Work Sans', sans-serif;
 }
 
 .preto {
@@ -62,8 +70,12 @@ body {
 
 .logo {
     text-decoration: none;
-    color: var(--texto-header);
+    color: var(--titulo);
     font-size: 20rem;
+}
+
+.logo h1 {
+    color: var(--titulo);
 }
 
 .caixa-nav {
@@ -99,7 +111,7 @@ body {
     padding: 0.3rem 1.5rem;
     background-color: var(--barra-pesquisa);
     border-radius: 30px;
-    border: 1px solid black;
+    border: 1px solid var(--borda-pesquisa);
 }
 
 .barraPesquisa::placeholder {
@@ -180,17 +192,19 @@ main {
 
 .bem-vindo {
     font-size: 1.5rem;
+    color: var(--titulo);
 }
 
 /* CARD */
 
 .card {
     max-width: 30rem;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 10px;
-  
+    margin: 1rem;
+    padding: 0.5rem;
 }
 
 .cardHeader {
@@ -200,26 +214,34 @@ main {
     padding: 1rem 0.5rem 0 0.5rem;
 }
 
-
+.txtUsuario {
+    font-style: italic;
+}
 
 .cardTitulo {
     text-align: center;
-    padding: 0 1rem;
+    color: #20c997;
 }
 
 .cardText {
-    padding: 0 0.5rem;
     text-align: justify;
 }
 
 .cardFooter {
     display: flex;
-    padding: 0.5rem 2rem;
     border-top: 1px solid black;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem;
 }
 
+.cardIcone {
+    color: var(--icone);
+}
+
+.date {
+    color: var(--placeholder-date);
+}
 /*--------------------------*/
 
 
@@ -281,8 +303,7 @@ main {
 
     .card {
         border: 1px solid black;
-        border-radius: 50px;
-        margin: 0.3rem 0;
+        padding: 0 1rem;
     }
     
 }
@@ -346,7 +367,7 @@ main {
     /* Laptop L para cima */
 
     * {
-        font-size: 28px;
+        font-size: 24px;
     }
 }
 
@@ -354,6 +375,6 @@ main {
     /* 4k para cima para cima */
 
     * {
-        font-size: 30px;
+        font-size: 26px;
     }
 }
